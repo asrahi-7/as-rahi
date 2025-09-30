@@ -45,17 +45,3 @@ Clone the repository:
 
 git clone [https://github.com/asrahi-7/as-rahi.git](https://github.com/asrahi-7/as-rahi.git)
 
-Open index.html: Open the index.html file in your favorite code editor.
-
-Edit the Content: Look for the comments that mark each section (e.g., <!-- About Me Section -->, <!-- Projects Section -->). You can replace the placeholder text and image URLs within these sections with your own content.
-
-Text: Simply change the text inside the HTML tags (like <p>, <h1>, <h3>).
-
-Images: Replace the src attribute in the <img> tags. I've used placehold.co for placeholders, which you can replace with your own images.
-
-Links: Update the href attribute in the <a> tags for your social media profiles, project demos, and GitHub links.
-
-Deploy to GitHub Pages: After customizing, commit and push your changes to your GitHub repository. Then, you can easily deploy it as a live website using GitHub Pages from the repository's settings.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
