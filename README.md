@@ -2,7 +2,7 @@ My Personal Portfolio Website
 This is the repository for my personal portfolio website, designed to showcase my skills, projects, and experience in a modern, animated, and professional format. The website is built as a single-page application and is fully responsive for optimal viewing on all devices.
 
 Live Demo
-You can view the live version of my portfolio here: https://asrahi-7.github.io/portfolio/ (Note: Replace this with your actual GitHub Pages URL after deployment.)
+You can view the live version of my portfolio here: https://asrahi-7.github.io/as-rahi/#
 
 Features
 Modern & Animated UI: Smooth animations on scroll to make the user experience engaging.
@@ -43,7 +43,7 @@ This portfolio is built within a single index.html file, making it very easy to 
 
 Clone the repository:
 
-git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+git clone [https://github.com/asrahi-7/as-rahi.git](https://github.com/asrahi-7/as-rahi.git)
 
 Open index.html: Open the index.html file in your favorite code editor.
 
