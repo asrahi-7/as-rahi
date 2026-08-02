@@ -43,4 +43,4 @@ This portfolio is built within a single index.html file, making it very easy to 
 
 Clone the repository:
 
-git clone [https://github.com/asrahi-07/as-rahi.git](https://github.com/asrahi-07/as-rahi.git)
+git clone [https://github.com/asrahi-7/as-rahi.git](https://github.com/asrahi-7/as-rahi.git)
