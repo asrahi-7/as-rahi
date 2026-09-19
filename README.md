@@ -1,46 +1,51 @@
-My Personal Portfolio Website
-This is the repository for my personal portfolio website, designed to showcase my skills, projects, and experience in a modern, animated, and professional format. The website is built as a single-page application and is fully responsive for optimal viewing on all devices.
+# Md. Ashfaq Shahamat Rahi — Portfolio
 
-Live Demo
-You can view the live version of my portfolio here: https://asrahi-7.github.io/as-rahi/#
+Personal portfolio site, built as a single static page. Live at:
+**https://asrahi-7.github.io/as-rahi**
 
-Features
-Modern & Animated UI: Smooth animations on scroll to make the user experience engaging.
+## Files
 
-Fully Responsive: The layout adapts seamlessly to desktops, tablets, and mobile phones.
+| File            | Purpose                                                              |
+|-----------------|-----------------------------------------------------------------------|
+| `index.html`    | The site. References `portrait.webp` for the profile photo.          |
+| `portrait.webp` | Profile photo, background removed, used by `index.html`.             |
 
-Single-Page Layout: All sections are easily accessible by scrolling or using the navigation bar.
+Both files must stay in the same folder — `index.html` loads the photo by filename, not by embedding it.
 
-Dedicated Sections:
+> A second, self-contained version (`as-rahi-portfolio.html`, photo embedded as base64) is kept separately for emailing or sharing as one file. It is not part of the deployed site.
 
-About Me: A brief introduction to who I am.
+## Stack
 
-Experience: Highlights of my volunteer and extracurricular activities.
+No build step, no framework, no dependencies to install.
 
-Projects: A showcase of my personal and academic projects with links to live demos and source code.
+- Plain HTML5 + CSS (custom properties, grid/flexbox)
+- [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) and [Newsreader](https://fonts.google.com/specimen/Newsreader) via Google Fonts CDN
+- A small vanilla-JS `IntersectionObserver` snippet to highlight the current section in the side nav
+- One inline SVG line chart (semester GPA) — no charting library
 
-Skills: A list of my technical competencies.
+## Running locally
 
-Certifications: A collection of my professional certifications.
+Just open `index.html` in a browser, or serve the folder:
 
-Contact: Easy ways to get in touch with me.
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
 
-Technologies Used
-HTML5: The core structure of the website.
+## Deploying updates (GitHub Pages)
 
-Tailwind CSS: A utility-first CSS framework for rapid and custom UI development.
+1. Edit `index.html` directly (sections are labelled: Introduction, Projects, Education, Skills, Activities, Certifications, Contact).
+2. Commit and push to the `asrahi-7.github.io` repo, `as-rahi` folder (or repo root, depending on how Pages is configured).
+3. GitHub Pages rebuilds automatically — changes usually appear within a minute or two.
 
-JavaScript: For interactivity, including the mobile menu toggle and navbar effects.
+## Common edits
 
-Animate on Scroll (AOS) Library: To create beautiful scroll-triggered animations.
+- **Swap the photo:** replace `portrait.webp` with a new image using the exact same filename. No HTML/CSS changes needed. Keep it roughly square (1:1) for the crop to look right.
+- **Add a project:** copy one of the `<div class="mini">` blocks (for a small project) or a `<article class="proj-major">` block (for a featured one) inside `#projects`, and edit the text and links.
+- **Update GPA chart:** edit the `<polyline points="...">` and `<circle>` coordinates plus the number labels inside the `<svg>` under `#education`. Coordinates are hand-placed, not generated — a value of `y=94` sits at 3.50, `y=54` at 3.75, `y=14` at 4.00 on the current scale.
+- **Update contact info:** the four tiles are in `.contact-grid` near the bottom of the file.
 
-Font Awesome: For scalable vector icons.
+## Notes
 
-Google Fonts: For modern and clean typography.
-
-How to Customize
-This portfolio is built within a single index.html file, making it very easy to customize. To add your own information, follow these steps:
-
-Clone the repository:
-
-git clone [https://github.com/asrahi-7/as-rahi.git](https://github.com/asrahi-7/as-rahi.git)
+- No analytics, tracking, or external JS beyond the two font stylesheets and Font Awesome-free inline SVG icons (all icons are hand-written SVG, no icon font).
+- Dark theme only; respects `prefers-reduced-motion` for the entrance animation.
